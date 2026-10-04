@@ -17,8 +17,8 @@
       <a class="brand" href="#top" aria-label="СОК — на главную">СОК<span>.</span></a>
 
       <nav class="desktop-nav" aria-label="Основная навигация">
-        <a href="#portfolio">Портфолио</a>
         <a href="#services">Направления</a>
+        <a href="#portfolio">Портфолио</a>
         <a href="#team">Команда</a>
         <a href="#prices">Цены</a>
         <a href="#contacts">Контакты</a>
@@ -34,8 +34,8 @@
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav aria-label="Мобильная навигация">
-      <a href="#portfolio"><span>01</span>Портфолио</a>
-      <a href="#services"><span>02</span>Направления</a>
+      <a href="#services"><span>01</span>Направления</a>
+      <a href="#portfolio"><span>02</span>Портфолио</a>
       <a href="#team"><span>03</span>Команда</a>
       <a href="#prices"><span>04</span>Цены</a>
       <a href="#contacts"><span>05</span>Контакты</a>
@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <a class="scroll-cue" href="#portfolio" aria-label="Прокрутить к портфолио">
+      <a class="scroll-cue" href="#services" aria-label="Прокрутить к направлениям">
         <span>SCROLL</span><i></i>
       </a>
     </section>
@@ -90,6 +90,45 @@
       <div class="ticker-track">
         <span>PHOTO</span><b>✦</b><span>VIDEO</span><b>✦</b><span>EVENTS</span><b>✦</b><span>WEDDINGS</span><b>✦</b><span>BUSINESS</span><b>✦</b><span>PORTRAITS</span><b>✦</b>
         <span>PHOTO</span><b>✦</b><span>VIDEO</span><b>✦</b><span>EVENTS</span><b>✦</b><span>WEDDINGS</span><b>✦</b><span>BUSINESS</span><b>✦</b><span>PORTRAITS</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-head light reveal">
+          <div>
+            <div class="eyebrow"><span class="pulse-dot"></span> Что снимаем</div>
+            <h2>Не «просто красиво».<br><em>Под конкретную задачу.</em></h2>
+          </div>
+          <p>Формат и подача меняются в зависимости от того, где материал будет жить: в личном архиве, соцсетях, рекламе или на событии.</p>
+        </div>
+
+        <div class="service-list" id="serviceList">
+          <article class="service-row reveal">
+            <span class="service-num">01</span>
+            <div><h3>Мероприятия</h3><p>Корпоративы, выпускные, дни рождения, концерты и другие события.</p></div>
+            <div class="service-tags"><span>репортаж</span><span>эмоции</span><span>динамика</span></div>
+            <a href="#portfolio" data-service-filter="event" aria-label="Показать мероприятия в портфолио">↗</a>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">02</span>
+            <div><h3>Свадьбы</h3><p>История дня без ощущения постановки — детали, люди и настоящие реакции.</p></div>
+            <div class="service-tags"><span>love story</span><span>wedding</span><span>storytelling</span></div>
+            <a href="#portfolio" data-service-filter="wedding" aria-label="Показать свадьбы в портфолио">↗</a>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">03</span>
+            <div><h3>Бизнес и бренды</h3><p>Контент, команда, продукт, интервью и рекламные задачи по вашему ТЗ.</p></div>
+            <div class="service-tags"><span>content</span><span>brand</span><span>promo</span></div>
+            <a href="#portfolio" data-service-filter="business" aria-label="Показать бизнес-съёмки в портфолио">↗</a>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-num">04</span>
+            <div><h3>Портреты</h3><p>Индивидуальная съёмка с акцентом на характер, свет и атмосферу.</p></div>
+            <div class="service-tags"><span>portrait</span><span>editorial</span><span>personal</span></div>
+            <a href="#portfolio" data-service-filter="portrait" aria-label="Показать портреты в портфолио">↗</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -182,45 +221,6 @@
               <span class="project-meta"><small>PORTRAIT</small><strong>Личный кадр</strong></span>
               <span class="project-arrow">↗</span>
             </button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="services section" id="services">
-      <div class="container">
-        <div class="section-head light reveal">
-          <div>
-            <div class="eyebrow"><span class="pulse-dot"></span> Что снимаем</div>
-            <h2>Не «просто красиво».<br><em>Под конкретную задачу.</em></h2>
-          </div>
-          <p>Формат и подача меняются в зависимости от того, где материал будет жить: в личном архиве, соцсетях, рекламе или на событии.</p>
-        </div>
-
-        <div class="service-list" id="serviceList">
-          <article class="service-row reveal">
-            <span class="service-num">01</span>
-            <div><h3>Мероприятия</h3><p>Корпоративы, выпускные, дни рождения, концерты и другие события.</p></div>
-            <div class="service-tags"><span>репортаж</span><span>эмоции</span><span>динамика</span></div>
-            <a href="#portfolio" data-service-filter="event" aria-label="Показать мероприятия в портфолио">↗</a>
-          </article>
-          <article class="service-row reveal">
-            <span class="service-num">02</span>
-            <div><h3>Свадьбы</h3><p>История дня без ощущения постановки — детали, люди и настоящие реакции.</p></div>
-            <div class="service-tags"><span>love story</span><span>wedding</span><span>storytelling</span></div>
-            <a href="#portfolio" data-service-filter="wedding" aria-label="Показать свадьбы в портфолио">↗</a>
-          </article>
-          <article class="service-row reveal">
-            <span class="service-num">03</span>
-            <div><h3>Бизнес и бренды</h3><p>Контент, команда, продукт, интервью и рекламные задачи по вашему ТЗ.</p></div>
-            <div class="service-tags"><span>content</span><span>brand</span><span>promo</span></div>
-            <a href="#portfolio" data-service-filter="business" aria-label="Показать бизнес-съёмки в портфолио">↗</a>
-          </article>
-          <article class="service-row reveal">
-            <span class="service-num">04</span>
-            <div><h3>Портреты</h3><p>Индивидуальная съёмка с акцентом на характер, свет и атмосферу.</p></div>
-            <div class="service-tags"><span>portrait</span><span>editorial</span><span>personal</span></div>
-            <a href="#portfolio" data-service-filter="portrait" aria-label="Показать портреты в портфолио">↗</a>
           </article>
         </div>
       </div>
