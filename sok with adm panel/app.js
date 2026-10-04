@@ -338,9 +338,15 @@
     if ($('#contactTitle')) $('#contactTitle').innerHTML = `${esc(c.line1 || '')}<br><em>${esc(c.line2 || '')}</em>`;
     setText('#contactLead', c.lead || '');
     const primary = $('#contactPrimary');
-    const menuCfg = c.contact_menu || {};
-    const menuItems = enabledItems(menuCfg.items || []);
-    const menuEnabled = menuCfg.enabled !== false && menuItems.length > 0;
+const menuCfg = c.contact_menu || {};
+
+const rawMenuItems =
+  Array.isArray(menuCfg.items) && menuCfg.items.length
+    ? menuCfg.items
+    : (Array.isArray(c.items) ? c.items : []);
+
+const menuItems = enabledItems(rawMenuItems);
+const menuEnabled = menuCfg.enabled !== false && menuItems.length > 0;
     if (primary) {
       primary.href = c.primary_href || '#';
       primary.innerHTML = `${esc(c.primary_label || '')} ↗`;
