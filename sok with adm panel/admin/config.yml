@@ -12,7 +12,7 @@ collections:
     files:
       - name: "site"
         label: "Главная страница"
-file: "sok with adm panel/content/site.json"
+        file: "sok with adm panel/content/site.json"
         format: "json"
         fields:
           - label: "Основное"
