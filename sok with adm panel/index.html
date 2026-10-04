@@ -390,30 +390,25 @@
           <div class="eyebrow" id="contactsEyebrow"><span class="pulse-dot"></span> Контакты</div>
           <h2 id="contactTitle">Есть идея?<br><em>Давай снимать.</em></h2>
           <p id="contactLead">Можно сразу прислать дату, формат, референсы или ссылку на понравившуюся работу из портфолио.</p>
-          <div class="contact-copy reveal" id="contactCopy">
-  <div class="eyebrow" id="contactsEyebrow">
-    <span class="pulse-dot"></span> Контакты
-  </div>
+          <div class="contact-menu-wrap" id="contactMenuWrap">
+            <a class="btn btn-lime" id="contactPrimary" href="mailto:illarik15@mail.ru?subject=Заявка%20на%20съёмку" aria-haspopup="dialog" aria-expanded="false">Связаться с нами ↗</a>
 
-  <h2 id="contactTitle">
-    Есть идея?<br><em>Давай снимать.</em>
-  </h2>
-
-  <p id="contactLead">
-    Можно сразу прислать дату, формат, референсы или ссылку на понравившуюся работу из портфолио.
-  </p>
-
-  <div class="contact-menu-wrap">
-    <button class="btn btn-lime contact-menu-btn" id="contactMenuBtn" type="button">
-      Связаться с нами ↗
-    </button>
-
-    <div class="contact-menu" id="contactMenu" aria-hidden="true">
-      ...
-    </div>
-  </div>
-</div>
-       
+            <div class="contact-popover" id="contactMenu" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="contactMenuTitle">
+              <div class="contact-popover-head">
+                <span id="contactMenuTitle">Связаться с нами</span>
+                <button class="contact-popover-close" id="contactMenuClose" type="button" aria-label="Закрыть меню">×</button>
+              </div>
+              <div class="contact-popover-list" id="contactMenuList">
+                <a class="contact-popover-item" href="tel:+79053431582">
+                  <span>Телефон</span><strong>+7 905 343-15-82</strong><i>↗</i>
+                </a>
+                <a class="contact-popover-item" href="mailto:illarik15@mail.ru">
+                  <span>Почта</span><strong>illarik15@mail.ru</strong><i>↗</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="contact-list reveal" id="contactList">
           <a href="tel:+79053431582"><span>Дмитрий</span><strong>+7 905 343-15-82</strong><i>↗</i></a>
