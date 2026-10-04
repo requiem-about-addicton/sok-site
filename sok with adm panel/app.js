@@ -338,7 +338,35 @@
     if ($('#contactTitle')) $('#contactTitle').innerHTML = `${esc(c.line1 || '')}<br><em>${esc(c.line2 || '')}</em>`;
     setText('#contactLead', c.lead || '');
     const primary = $('#contactPrimary');
-    if (primary) { primary.href = c.primary_href || '#'; primary.innerHTML = `${esc(c.primary_label || '')} ↗`; }
+    const menuCfg = c.contact_menu || {};
+    const menuItems = enabledItems(menuCfg.items || []);
+    const menuEnabled = menuCfg.enabled !== false && menuItems.length > 0;
+    if (primary) {
+      primary.href = c.primary_href || '#';
+      primary.innerHTML = `${esc(c.primary_label || '')} ↗`;
+      primary.dataset.contactMenuEnabled = String(menuEnabled);
+      primary.setAttribute('aria-haspopup', 'dialog');
+      primary.setAttribute('aria-expanded', 'false');
+    }
+    const contactMenu = $('#contactMenu');
+    if (contactMenu) {
+      contactMenu.hidden = !menuEnabled;
+      contactMenu.setAttribute('aria-hidden', 'true');
+      setText('#contactMenuTitle', menuCfg.title || c.primary_label || 'Связаться с нами');
+      const close = $('#contactMenuClose');
+      if (close) close.setAttribute('aria-label', menuCfg.close_label || 'Закрыть меню');
+      const menuList = $('#contactMenuList');
+      if (menuList) {
+        menuList.innerHTML = menuItems.length ? menuItems.map(item => {
+          const label = esc(item.label || '');
+          const value = esc(item.value || '');
+          const href = String(item.href || '').trim();
+          if (!href) return `<div class="contact-popover-item is-disabled"><span>${label}</span><strong>${value}</strong><i>·</i></div>`;
+          const external = item.new_tab === true ? ' target="_blank" rel="noopener noreferrer"' : '';
+          return `<a class="contact-popover-item" href="${esc(href)}"${external}><span>${label}</span><strong>${value}</strong><i>↗</i></a>`;
+        }).join('') : '<div class="contact-popover-empty">Добавьте способы связи в админ-панели.</div>';
+      }
+    }
     const list = $('#contactList');
     if (list) {
       const rows = (c.items || []).map(item => `<a href="${esc(item.href || '#')}"><span>${esc(item.label)}</span><strong>${esc(item.value)}</strong><i>↗</i></a>`).join('');
@@ -403,6 +431,10 @@
     const hoursOutput = $('#hoursOutput');
     const calcTotal = $('#calcTotal');
     const calcCta = $('#calcCta');
+    const contactPrimary = $('#contactPrimary');
+    const contactMenuWrap = $('#contactMenuWrap');
+    const contactMenu = $('#contactMenu');
+    const contactMenuClose = $('#contactMenuClose');
 
     $$('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
     const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 24);
@@ -418,6 +450,29 @@
     };
     menuToggle?.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
     mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+    const setContactMenu = open => {
+      if (!contactMenu || !contactPrimary || contactPrimary.dataset.contactMenuEnabled !== 'true') return;
+      contactMenu.classList.toggle('is-open', open);
+      contactMenu.setAttribute('aria-hidden', String(!open));
+      contactPrimary.setAttribute('aria-expanded', String(open));
+      if (matchMedia('(max-width:640px)').matches) body.classList.toggle('contact-menu-open', open);
+      if (open) contactMenuClose?.focus({ preventScroll:true });
+    };
+    contactPrimary?.addEventListener('click', e => {
+      if (contactPrimary.dataset.contactMenuEnabled !== 'true') return;
+      e.preventDefault();
+      e.stopPropagation();
+      setContactMenu(!contactMenu?.classList.contains('is-open'));
+    });
+    contactMenuClose?.addEventListener('click', () => setContactMenu(false));
+    contactMenu?.addEventListener('click', e => e.stopPropagation());
+    document.addEventListener('click', e => {
+      if (contactMenu?.classList.contains('is-open') && !contactMenuWrap?.contains(e.target)) setContactMenu(false);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && contactMenu?.classList.contains('is-open')) setContactMenu(false);
+    });
 
     const animationsEnabled = !body.classList.contains('no-animations');
     const observer = animationsEnabled && 'IntersectionObserver' in window ? new IntersectionObserver((entries, obs) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); } }), { threshold:.08, rootMargin:'0px 0px -40px' }) : null;
