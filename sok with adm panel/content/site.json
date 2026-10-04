@@ -180,7 +180,7 @@
   ],
   "prices": [
     {
-      "rate": "",
+      "rate": 2500,
       "enabled": true,
       "featured": false,
       "cta": "Заказать съёмку",
@@ -193,7 +193,7 @@
       "key": "photo"
     },
     {
-      "rate": "",
+      "rate": 3000,
       "enabled": true,
       "featured": true,
       "cta": "Заказать съёмку",
@@ -206,7 +206,7 @@
       "key": "video"
     },
     {
-      "rate": "",
+      "rate": 4000,
       "enabled": true,
       "featured": true,
       "cta": "Заказать комплект",
@@ -436,7 +436,7 @@
     "lead": "Юбилеи, свадьбы, корпоративы, бизнес. Выбирай нужное направление!",
     "scroll_href": "#services",
     "line1": "Ваши",
-    "line2": "воспоминания",
+    "line2": "эмоции",
     "line3": "от нас."
   },
   "team": [
