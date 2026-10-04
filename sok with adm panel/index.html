@@ -19,7 +19,7 @@
       <nav class="desktop-nav" aria-label="Основная навигация">
         <a href="#portfolio">Портфолио</a>
         <a href="#services">Направления</a>
-        <a href="team.html">Команда</a>
+        <a href="#team">Команда</a>
         <a href="#prices">Цены</a>
         <a href="#contacts">Контакты</a>
       </nav>
@@ -36,7 +36,7 @@
     <nav aria-label="Мобильная навигация">
       <a href="#portfolio"><span>01</span>Портфолио</a>
       <a href="#services"><span>02</span>Направления</a>
-      <a href="team.html"><span>03</span>Команда</a>
+      <a href="#team"><span>03</span>Команда</a>
       <a href="#prices"><span>04</span>Цены</a>
       <a href="#contacts"><span>05</span>Контакты</a>
     </nav>
@@ -223,6 +223,78 @@
             <a href="#portfolio" data-service-filter="portrait" aria-label="Показать портреты в портфолио">↗</a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="team-showcase section" id="team">
+      <div class="container">
+        <div class="team-showcase-head reveal">
+          <div>
+            <div class="eyebrow dark"><span class="pulse-dot"></span> Люди за кадром</div>
+            <h2>Наша<br><em>команда.</em></h2>
+          </div>
+          <div class="team-slider-controls" aria-label="Листать карточки команды">
+            <button class="team-arrow team-prev" type="button" aria-label="Предыдущие карточки">←</button>
+            <span><b id="teamCurrent">01</b> / <i id="teamTotal">04</i></span>
+            <button class="team-arrow team-next" type="button" aria-label="Следующие карточки">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-rail-wrap reveal">
+        <div class="team-rail" id="teamRail" tabindex="0" aria-label="Карточки фотографов и видеографов">
+          <article class="team-card" data-team-index="0">
+            <figure>
+              <img src="https://thb.tildacdn.pub/tild3038-3430-4539-b730-656233613133/-/empty/RlPFHQmmNe0VCW8LSXV3.jpg" alt="Дмитрий — фотограф" loading="lazy">
+              <span>PHOTO</span>
+            </figure>
+            <div class="team-card-copy">
+              <div><small>01 / Фотограф</small><h3>Дмитрий</h3></div>
+              <p>Репортаж, портреты и живые кадры с событий. Ловит момент без лишней постановки.</p>
+              <div class="team-tags"><span>#репортаж</span><span>#портрет</span><span>#events</span></div>
+            </div>
+          </article>
+
+          <article class="team-card" data-team-index="1">
+            <figure>
+              <img src="https://thb.tildacdn.pub/tild3663-3538-4334-a438-356663393230/-/empty/05062026-156.jpg" alt="Александр — видеограф" loading="lazy">
+              <span>VIDEO</span>
+            </figure>
+            <div class="team-card-copy">
+              <div><small>02 / Видеограф</small><h3>Александр</h3></div>
+              <p>Динамичная съёмка, атмосфера и монтаж — от коротких роликов до истории события.</p>
+              <div class="team-tags"><span>#video</span><span>#montage</span><span>#story</span></div>
+            </div>
+          </article>
+
+          <article class="team-card" data-team-index="2">
+            <figure>
+              <img src="https://thb.tildacdn.pub/tild3465-3061-4566-a339-663062363765/-/empty/8FkZmIFanv853HRN__Sx.jpg" alt="Карточка фотографа" loading="lazy">
+              <span>PHOTO</span>
+            </figure>
+            <div class="team-card-copy">
+              <div><small>03 / Фотограф</small><h3>Фотограф 02</h3></div>
+              <p>Карточка готова под нового участника команды — имя, описание и фотографию можно заменить через админку.</p>
+              <div class="team-tags"><span>#wedding</span><span>#people</span><span>#photo</span></div>
+            </div>
+          </article>
+
+          <article class="team-card" data-team-index="3">
+            <figure>
+              <img src="https://thb.tildacdn.pub/tild6630-3532-4364-a630-616566643762/-/empty/05062026-269.jpg" alt="Карточка видеографа" loading="lazy">
+              <span>VIDEO</span>
+            </figure>
+            <div class="team-card-copy">
+              <div><small>04 / Видеограф</small><h3>Видеограф 02</h3></div>
+              <p>Карточка готова под нового участника команды — структура сайта автоматически подхватит изменения.</p>
+              <div class="team-tags"><span>#content</span><span>#reels</span><span>#video</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="container team-swipe-hint">
+        <span>DRAG / SWIPE</span><i></i><span>Листай карточки</span>
       </div>
     </section>
 
