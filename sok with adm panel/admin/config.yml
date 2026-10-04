@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPOSITORY
+  repo: requiem-about-addicton/sok-site
   branch: main
 
-media_folder: "assets/uploads"
+media_folder: "sok with adm panel/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
@@ -12,7 +12,7 @@ collections:
     files:
       - name: "site"
         label: "Главная страница"
-        file: "content/site.json"
+file: "sok with adm panel/content/site.json"
         format: "json"
         fields:
           - label: "Основное"
