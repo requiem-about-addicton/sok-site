@@ -1,0 +1,203 @@
+{
+  "site": {
+    "title": "СОК — фото / видео / контент",
+    "description": "СОК — фото, видео и контент для событий, свадеб, бизнеса и личных историй.",
+    "brand": "СОК",
+    "colors": {
+      "forest": "#073d2c",
+      "lime": "#c6ff2f",
+      "cream": "#f3f1e8",
+      "ink": "#0b1711"
+    }
+  },
+  "hero": {
+    "eyebrow": "Команда фото и видео",
+    "line1": "Снимаем",
+    "line2": "так, чтобы",
+    "line3": "цепляло.",
+    "lead": "Живые события, люди, бренды и истории. Выбирай нужное направление — и сразу смотри релевантные работы.",
+    "main_image": "https://thb.tildacdn.pub/tild3663-3538-4334-a438-356663393230/-/empty/05062026-156.jpg",
+    "small_image": "https://thb.tildacdn.pub/tild3038-3430-4539-b730-656233613133/-/empty/RlPFHQmmNe0VCW8LSXV3.jpg"
+  },
+  "category_labels": {
+    "event": "Мероприятия",
+    "wedding": "Свадьбы",
+    "business": "Бизнес",
+    "portrait": "Портреты"
+  },
+  "portfolio": [
+    {
+      "title": "Событие / Репортаж",
+      "category": "event",
+      "image": "https://thb.tildacdn.pub/tild3663-3538-4334-a438-356663393230/-/empty/05062026-156.jpg",
+      "alt": "Событийная репортажная съёмка",
+      "size": "wide"
+    },
+    {
+      "title": "История двоих",
+      "category": "wedding",
+      "image": "https://thb.tildacdn.pub/tild3465-3061-4566-a339-663062363765/-/empty/8FkZmIFanv853HRN__Sx.jpg",
+      "alt": "Свадебная история",
+      "size": "tall"
+    },
+    {
+      "title": "Команда в кадре",
+      "category": "business",
+      "image": "https://thb.tildacdn.pub/tild6131-3435-4732-b963-623565646362/-/empty/05062026-173.jpg",
+      "alt": "Бизнес-съёмка команды",
+      "size": "normal"
+    },
+    {
+      "title": "Портрет / Character",
+      "category": "portrait",
+      "image": "https://thb.tildacdn.pub/tild3038-3430-4539-b730-656233613133/-/empty/RlPFHQmmNe0VCW8LSXV3.jpg",
+      "alt": "Портретная съёмка",
+      "size": "normal"
+    },
+    {
+      "title": "Выпускной / Energy",
+      "category": "event",
+      "image": "https://thb.tildacdn.pub/tild3664-3835-4136-a631-376330383562/-/empty/05062026-254.jpg",
+      "alt": "Съёмка выпускного",
+      "size": "wide"
+    },
+    {
+      "title": "Бренд / Продукт",
+      "category": "business",
+      "image": "https://thb.tildacdn.pub/tild6630-3532-4364-a630-616566643762/-/empty/05062026-269.jpg",
+      "alt": "Контент для бизнеса",
+      "size": "normal"
+    },
+    {
+      "title": "Wedding story",
+      "category": "wedding",
+      "image": "https://thb.tildacdn.pub/tild6362-6566-4732-a135-396266643039/-/empty/16ShKflx3mx-uxOaNarb.jpg",
+      "alt": "Свадебная съёмка",
+      "size": "tall"
+    },
+    {
+      "title": "Личный кадр",
+      "category": "portrait",
+      "image": "https://thb.tildacdn.pub/tild6637-3837-4265-b837-376139396462/-/empty/2_1.jpg",
+      "alt": "Индивидуальный портрет",
+      "size": "normal"
+    }
+  ],
+  "services": [
+    {
+      "title": "Мероприятия",
+      "description": "Корпоративы, выпускные, дни рождения, концерты и другие события.",
+      "filter": "event",
+      "tags": [
+        "репортаж",
+        "эмоции",
+        "динамика"
+      ]
+    },
+    {
+      "title": "Свадьбы",
+      "description": "История дня без ощущения постановки — детали, люди и настоящие реакции.",
+      "filter": "wedding",
+      "tags": [
+        "love story",
+        "wedding",
+        "storytelling"
+      ]
+    },
+    {
+      "title": "Бизнес и бренды",
+      "description": "Контент, команда, продукт, интервью и рекламные задачи по вашему ТЗ.",
+      "filter": "business",
+      "tags": [
+        "content",
+        "brand",
+        "promo"
+      ]
+    },
+    {
+      "title": "Портреты",
+      "description": "Индивидуальная съёмка с акцентом на характер, свет и атмосферу.",
+      "filter": "portrait",
+      "tags": [
+        "portrait",
+        "editorial",
+        "personal"
+      ]
+    }
+  ],
+  "process": [
+    {
+      "title": "Обсуждаем задачу",
+      "description": "Формат, дата, место, настроение, референсы и то, где будет использоваться материал."
+    },
+    {
+      "title": "Собираем план",
+      "description": "Если нужна постановка — заранее определяем ключевые кадры, точки и последовательность."
+    },
+    {
+      "title": "Снимаем",
+      "description": "Работаем по плану, но оставляем место для живых моментов — они часто становятся лучшими."
+    },
+    {
+      "title": "Отдаём результат",
+      "description": "Финальный материал передаём в удобном цифровом формате."
+    }
+  ],
+  "prices": [
+    {
+      "key": "photo",
+      "label": "PHOTO",
+      "title": "Фото",
+      "description": "Репортаж, мероприятие, портреты, контент.",
+      "rate": 2500,
+      "pill": "от 1 часа",
+      "featured": false,
+      "cta": "Заказать съёмку"
+    },
+    {
+      "key": "video",
+      "label": "VIDEO",
+      "title": "Видео",
+      "description": "Динамичная съёмка атмосферы, людей и деталей.",
+      "rate": 3000,
+      "pill": "монтаж",
+      "featured": true,
+      "cta": "Обсудить съёмку"
+    },
+    {
+      "key": "combo",
+      "label": "COMBO",
+      "title": "Фото + видео",
+      "description": "Два формата в одной съёмке и единая визуальная подача.",
+      "rate": 5000,
+      "pill": "команда",
+      "featured": false,
+      "cta": "Заказать комплект"
+    }
+  ],
+  "contacts": {
+    "line1": "Есть идея?",
+    "line2": "Давай снимать.",
+    "lead": "Можно сразу прислать дату, формат, референсы или ссылку на понравившуюся работу из портфолио.",
+    "primary_label": "Написать на почту",
+    "primary_href": "mailto:illarik15@mail.ru?subject=Заявка%20на%20съёмку",
+    "items": [
+      {
+        "label": "Дмитрий",
+        "value": "+7 905 343-15-82",
+        "href": "tel:+79053431582"
+      },
+      {
+        "label": "Александр",
+        "value": "+7 967 795-03-52",
+        "href": "tel:+79677950352"
+      },
+      {
+        "label": "E-mail",
+        "value": "illarik15@mail.ru",
+        "href": "mailto:illarik15@mail.ru"
+      }
+    ],
+    "copy_email": "illarik15@mail.ru"
+  }
+}
