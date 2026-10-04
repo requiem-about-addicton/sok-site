@@ -759,3 +759,21 @@ img{display:block;max-width:100%}
 .no-animations .ticker-track{animation:none!important}
 .no-cursor-glow .cursor-glow{display:none!important}
 @media(max-width:760px){.brand-logo{max-height:44px}.team-intro,.process-lead{font-size:13px}}
+/* Контактное меню — открывать вверх на ПК */
+@media (min-width: 641px) {
+  .contact-popover {
+    top: auto;
+    bottom: calc(100% + 14px);
+
+    width: min(390px, calc(100vw - 32px));
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+
+    transform: translateY(8px) scale(.985);
+    transform-origin: bottom left;
+  }
+
+  .contact-popover.is-open {
+    transform: translateY(0) scale(1);
+  }
+}
