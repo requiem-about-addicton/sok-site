@@ -460,12 +460,38 @@
     let currentRate = Number(calcPlans[0]?.dataset.rate || 0);
     let currentPlan = calcPlans[0]?.dataset.plan || 'Съёмка';
     const hourWord = n => { const a=n%10,b=n%100; if(a===1&&b!==11)return calcConfig.hour_one || 'час'; if([2,3,4].includes(a)&&![12,13,14].includes(b))return calcConfig.hour_few || 'часа'; return calcConfig.hour_many || 'часов'; };
-    const updateCalc = () => {
-      const h=Number(hoursRange?.value||1), total=h*currentRate;
-      if(hoursOutput)hoursOutput.textContent=`${h} ${hourWord(h)}`;
-      if(calcTotal)calcTotal.textContent=`${formatNumber(total)} ${currency}`;
-      if(calcCta)calcCta.dataset.summary=`${currentPlan}, ${h} ${hourWord(h)}, около ${formatNumber(total)} ${currency}`;
-    };
+   const updateCalc = () => {
+  const h = Number(hoursRange?.value || 1);
+
+  const hourlyRate = h > 5
+    ? Math.max(0, currentRate - 500)
+    : currentRate;
+
+  const total = h * hourlyRate;
+
+  const calculator = $('.calculator');
+
+  if (calculator) {
+    calculator.classList.toggle('discount-active', h > 5);
+  }
+
+  if (hoursOutput) {
+    hoursOutput.textContent =
+      `${h} ${hourWord(h)} · ${formatNumber(hourlyRate)} ${currency}/ч`;
+  }
+
+  if (calcTotal) {
+    calcTotal.textContent =
+      `${formatNumber(total)} ${currency}`;
+  }
+
+  if (calcCta) {
+    calcCta.dataset.summary =
+      `${currentPlan}, ${h} ${hourWord(h)}, ` +
+      `${formatNumber(hourlyRate)} ${currency}/ч, ` +
+      `около ${formatNumber(total)} ${currency}`;
+  }
+};
     calcPlans.forEach(btn => btn.addEventListener('click', () => { currentRate=Number(btn.dataset.rate||0); currentPlan=btn.dataset.plan||'Съёмка'; calcPlans.forEach(o=>{const on=o===btn;o.classList.toggle('active',on);o.setAttribute('aria-pressed',String(on));}); updateCalc(); }));
     hoursRange?.addEventListener('input', updateCalc); updateCalc();
 
