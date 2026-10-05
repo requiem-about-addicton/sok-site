@@ -343,10 +343,15 @@
         "label": "Telegram",
         "value": "@photo_video_cheb",
         "href": "https://t.me/photo_video_cheb"
+      },
+      {
+        "label": "Авито",
+        "href": "https://www.avito.ru/cheboksary/predlozheniya_uslug/fotograf_i_videograf_na_vashe_meropriyatie_7356361458",
+        "value": "Дмитрий"
       }
     ],
     "enabled": true,
-    "primary_href": "",
+    "primary_href": "https://www.avito.ru/cheboksary/predlozheniya_uslug/fotograf_i_videograf_na_vashe_meropriyatie_7356361458",
     "eyebrow": "Контакты",
     "copy_label": "Скопировать e-mail",
     "footer_left": "СОК ©",
@@ -364,7 +369,7 @@
     "text_color": "#ffffff",
     "copy_email": "sok-media@mail.ru",
     "copy_small_label": "Быстро",
-    "primary_label": "Связаться с нами",
+    "primary_label": "Связаться на Авито",
     "footer_right": "Наверх ↑",
     "lead": "Можно сразу прислать дату, формат, референсы или ссылку на понравившуюся работу из портфолио",
     "line1": "Есть идея?",
