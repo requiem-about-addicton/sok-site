@@ -777,3 +777,86 @@ img{display:block;max-width:100%}
     transform: translateY(0) scale(1);
   }
 }
+/* ========================================
+   СКИДКА ПРИ СЪЁМКЕ ОТ 6 ЧАСОВ
+======================================== */
+
+.calculator {
+  transition:
+    background-color .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+
+/* Плашка скидки */
+
+.duration-discount-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin: 12px 0 4px;
+  padding: 8px 12px;
+
+  border:
+    1px solid rgba(198, 255, 47, .2);
+
+  border-radius: 999px;
+
+  background:
+    rgba(198, 255, 47, .05);
+
+  color: var(--lime);
+
+  opacity: .45;
+
+  transition:
+    opacity .3s ease,
+    color .3s ease,
+    background-color .3s ease,
+    border-color .3s ease,
+    transform .3s ease;
+}
+
+
+.duration-discount-badge span {
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: .03em;
+}
+
+
+.duration-discount-badge small {
+  font-size: 9px;
+  font-weight: 700;
+
+  opacity: .7;
+}
+
+
+/* Активная скидка */
+
+.calculator.discount-active {
+  border-color: var(--lime);
+
+  box-shadow:
+    0 0 0 2px rgba(198, 255, 47, .15),
+    0 24px 70px rgba(198, 255, 47, .12);
+}
+
+
+.calculator.discount-active
+.duration-discount-badge {
+
+  opacity: 1;
+
+  background: var(--lime);
+
+  color: var(--ink);
+
+  border-color: var(--lime);
+
+  transform: scale(1.025);
+}
