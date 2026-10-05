@@ -336,12 +336,17 @@
       },
       {
         "label": "E-mail",
-        "value": "illarik15@mail.ru",
-        "href": "mailto:illarik15@mail.ru"
+        "value": "sok-media@mail.ru",
+        "href": "mailto:sok-media@mail.ru"
+      },
+      {
+        "label": "Telegram",
+        "value": "@photo_video_cheb",
+        "href": "https://t.me/photo_video_cheb"
       }
     ],
     "enabled": true,
-    "primary_href": "mailto:illarik15@mail.ru?subject=Заявка%20на%20съёмку",
+    "primary_href": "mailto:sok-media@mail.ru?subject=Заявка%20на%20съёмку",
     "eyebrow": "Контакты",
     "copy_label": "Скопировать e-mail",
     "footer_left": "СОК ©",
@@ -357,7 +362,7 @@
     },
     "muted_color": "rgba(255,255,255,.62)",
     "text_color": "#ffffff",
-    "copy_email": "illarik15@mail.ru",
+    "copy_email": "sok-media@mail.ru",
     "copy_small_label": "Быстро",
     "primary_label": "Связаться с нами",
     "footer_right": "Наверх ↑",
