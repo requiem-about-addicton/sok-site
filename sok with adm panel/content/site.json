@@ -10,7 +10,7 @@
     "live_label": "LIVE",
     "enabled": true,
     "min_hours": 1,
-    "cta_label": "Обсудить этот вариант ↗",
+    "cta_label": "Обсудить этот вариант ↗︎",
     "duration_label": "Длительность",
     "hour_one": "час",
     "hours_short": "ч",
@@ -513,7 +513,7 @@
         "динамика"
       ],
       "enabled": true,
-      "link_label": "↗"
+      "link_label": "↗︎"
     },
     {
       "title": "Свадьбы",
@@ -525,7 +525,7 @@
         "сюжет"
       ],
       "enabled": true,
-      "link_label": "↗"
+      "link_label": "↗︎"
     },
     {
       "title": "Бизнес и бренды",
@@ -537,7 +537,7 @@
         "промо"
       ],
       "enabled": true,
-      "link_label": "↗"
+      "link_label": "↗︎"
     },
     {
       "title": "Студийные фотосеты",
@@ -549,7 +549,7 @@
         "личность"
       ],
       "enabled": true,
-      "link_label": "↗"
+      "link_label": "↗︎"
     }
   ]
 }
