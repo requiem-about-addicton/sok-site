@@ -125,7 +125,7 @@
     const mobile = $('#mobileNav');
     if (desktop) desktop.innerHTML = nav.map(item => `<a href="${esc(item.href || '#')}">${esc(item.label || '')}</a>`).join('');
     if (mobile) mobile.innerHTML = nav.map((item, i) => `<a href="${esc(item.href || '#')}"><span>${String(i + 1).padStart(2,'0')}</span>${esc(item.label || '')}</a>`).join('');
-    setLink('#headerCta', config.cta_label || '', config.cta_href || '#', '↗');
+    setLink('#headerCta', config.cta_label || '', config.cta_href || '#', '↗︎');
     setText('#mobileFooterLeft', config.mobile_footer_left || '');
     setText('#mobileFooterRight', config.mobile_footer_right || '');
     if (config.background_scrolled) document.documentElement.style.setProperty('--header-scrolled', config.background_scrolled);
@@ -136,7 +136,7 @@
     if ($('#heroEyebrow')) $('#heroEyebrow').innerHTML = `<span class="pulse-dot"></span> ${esc(hero.eyebrow || '')}`;
     if ($('#heroTitle')) $('#heroTitle').innerHTML = `${esc(hero.line1 || '')}<br>${esc(hero.line2 || '')}<br><em>${esc(hero.line3 || '')}</em>`;
     setText('#heroLead', hero.lead || '');
-    setLink('#heroPrimary', hero.primary_label || '', hero.primary_href || '#', '↓');
+    setLink('#heroPrimary', hero.primary_label || '', hero.primary_href || '#', '↓︎');
     setLink('#heroSecondary', hero.secondary_label || '', hero.secondary_href || '#');
 
     const main = $('#heroMainImage');
@@ -273,7 +273,7 @@
           <img src="${esc(item.image)}" alt="${esc(item.alt || item.title)}" loading="lazy" style="object-position:${esc(item.object_position || 'center center')}">
           <span class="project-overlay"></span>
           <span class="project-meta"><small>${esc(labelForCategory(labels,item.category).toUpperCase())}</small><strong>${esc(item.title)}</strong></span>
-          <span class="project-arrow">↗</span>
+          <span class="project-arrow">↗︎</span>
         </button>
       </article>`;
     }).join('');
@@ -287,7 +287,7 @@
       <span class="service-num">${String(i + 1).padStart(2,'0')}</span>
       <div><h3>${esc(item.title)}</h3><p>${esc(item.description)}</p></div>
       <div class="service-tags">${(item.tags || []).map(t => `<span>${esc(t)}</span>`).join('')}</div>
-      <a href="#portfolio" data-service-filter="${esc(item.filter)}" aria-label="Показать ${esc(item.title)} в портфолио">${esc(item.link_label || '↗')}</a>
+      <a href="#portfolio" data-service-filter="${esc(item.filter)}" aria-label="Показать ${esc(item.title)} в портфолио">${esc(item.link_label || '↗︎')}</a>
     </article>`).join('');
   }
 
@@ -309,7 +309,7 @@
       <h3>${esc(item.title)}</h3>
       <p>${esc(item.description)}</p>
       <div class="price-value">${formatNumber(item.rate)} <small>${esc(currency)} / ${esc(unit)}</small></div>
-      <a class="text-link" href="${esc(item.cta_href || '#contacts')}">${esc(item.cta || 'Обсудить')} <span>↗</span></a>
+      <a class="text-link" href="${esc(item.cta_href || '#contacts')}">${esc(item.cta || 'Обсудить')} <span>↗︎</span></a>
     </article>`).join('');
     if (switcher) switcher.innerHTML = items.map((item, i) => `<button class="calc-plan${i === 0 ? ' active' : ''}" type="button" data-rate="${Number(item.rate || 0)}" data-plan="${esc(item.title)}" aria-pressed="${i === 0 ? 'true' : 'false'}">${esc(item.calculator_label || item.title)}</button>`).join('');
   }
@@ -338,44 +338,10 @@
     if ($('#contactTitle')) $('#contactTitle').innerHTML = `${esc(c.line1 || '')}<br><em>${esc(c.line2 || '')}</em>`;
     setText('#contactLead', c.lead || '');
     const primary = $('#contactPrimary');
-const menuCfg = c.contact_menu || {};
-
-const rawMenuItems =
-  Array.isArray(menuCfg.items) && menuCfg.items.length
-    ? menuCfg.items
-    : (Array.isArray(c.items) ? c.items : []);
-
-const menuItems = enabledItems(rawMenuItems);
-const menuEnabled = menuCfg.enabled !== false && menuItems.length > 0;
-    if (primary) {
-      primary.href = c.primary_href || '#';
-      primary.innerHTML = `${esc(c.primary_label || '')} ↗`;
-      primary.dataset.contactMenuEnabled = String(menuEnabled);
-      primary.setAttribute('aria-haspopup', 'dialog');
-      primary.setAttribute('aria-expanded', 'false');
-    }
-    const contactMenu = $('#contactMenu');
-    if (contactMenu) {
-      contactMenu.hidden = !menuEnabled;
-      contactMenu.setAttribute('aria-hidden', 'true');
-      setText('#contactMenuTitle', menuCfg.title || c.primary_label || 'Связаться с нами');
-      const close = $('#contactMenuClose');
-      if (close) close.setAttribute('aria-label', menuCfg.close_label || 'Закрыть меню');
-      const menuList = $('#contactMenuList');
-      if (menuList) {
-        menuList.innerHTML = menuItems.length ? menuItems.map(item => {
-          const label = esc(item.label || '');
-          const value = esc(item.value || '');
-          const href = String(item.href || '').trim();
-          if (!href) return `<div class="contact-popover-item is-disabled"><span>${label}</span><strong>${value}</strong><i>·</i></div>`;
-          const external = item.new_tab === true ? ' target="_blank" rel="noopener noreferrer"' : '';
-          return `<a class="contact-popover-item" href="${esc(href)}"${external}><span>${label}</span><strong>${value}</strong><i>↗</i></a>`;
-        }).join('') : '<div class="contact-popover-empty">Добавьте способы связи в админ-панели.</div>';
-      }
-    }
+    if (primary) { primary.href = c.primary_href || '#'; primary.innerHTML = `${esc(c.primary_label || '')} ↗︎`; }
     const list = $('#contactList');
     if (list) {
-      const rows = (c.items || []).map(item => `<a href="${esc(item.href || '#')}"><span>${esc(item.label)}</span><strong>${esc(item.value)}</strong><i>↗</i></a>`).join('');
+      const rows = (c.items || []).map(item => `<a href="${esc(item.href || '#')}"><span>${esc(item.label)}</span><strong>${esc(item.value)}</strong><i>↗︎</i></a>`).join('');
       const copy = c.copy_email ? `<button type="button" class="copy-mail" data-copy="${esc(c.copy_email)}" data-success="${esc(c.copy_success_label || 'E-mail скопирован ✓')}"><span>${esc(c.copy_small_label || 'Быстро')}</span><strong>${esc(c.copy_label || 'Скопировать e-mail')}</strong><i>+</i></button>` : '';
       list.innerHTML = rows + copy;
     }
@@ -437,10 +403,6 @@ const menuEnabled = menuCfg.enabled !== false && menuItems.length > 0;
     const hoursOutput = $('#hoursOutput');
     const calcTotal = $('#calcTotal');
     const calcCta = $('#calcCta');
-    const contactPrimary = $('#contactPrimary');
-    const contactMenuWrap = $('#contactMenuWrap');
-    const contactMenu = $('#contactMenu');
-    const contactMenuClose = $('#contactMenuClose');
 
     $$('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
     const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 24);
@@ -456,29 +418,6 @@ const menuEnabled = menuCfg.enabled !== false && menuItems.length > 0;
     };
     menuToggle?.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
     mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-
-    const setContactMenu = open => {
-      if (!contactMenu || !contactPrimary || contactPrimary.dataset.contactMenuEnabled !== 'true') return;
-      contactMenu.classList.toggle('is-open', open);
-      contactMenu.setAttribute('aria-hidden', String(!open));
-      contactPrimary.setAttribute('aria-expanded', String(open));
-      if (matchMedia('(max-width:640px)').matches) body.classList.toggle('contact-menu-open', open);
-      if (open) contactMenuClose?.focus({ preventScroll:true });
-    };
-    contactPrimary?.addEventListener('click', e => {
-      if (contactPrimary.dataset.contactMenuEnabled !== 'true') return;
-      e.preventDefault();
-      e.stopPropagation();
-      setContactMenu(!contactMenu?.classList.contains('is-open'));
-    });
-    contactMenuClose?.addEventListener('click', () => setContactMenu(false));
-    contactMenu?.addEventListener('click', e => e.stopPropagation());
-    document.addEventListener('click', e => {
-      if (contactMenu?.classList.contains('is-open') && !contactMenuWrap?.contains(e.target)) setContactMenu(false);
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && contactMenu?.classList.contains('is-open')) setContactMenu(false);
-    });
 
     const animationsEnabled = !body.classList.contains('no-animations');
     const observer = animationsEnabled && 'IntersectionObserver' in window ? new IntersectionObserver((entries, obs) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); } }), { threshold:.08, rootMargin:'0px 0px -40px' }) : null;
@@ -515,111 +454,20 @@ const menuEnabled = menuCfg.enabled !== false && menuItems.length > 0;
       if (lightbox?.classList.contains('open')) { if (e.key === 'ArrowLeft') moveProject(-1); if (e.key === 'ArrowRight') moveProject(1); }
     });
 
-const pricesSection = siteData?.prices_section || {};
-const calcConfig = siteData?.calculator || {};
-const currency = pricesSection.currency || '₽';
-
-let currentRate = Number(calcPlans[0]?.dataset.rate || 0);
-let currentPlan = calcPlans[0]?.dataset.plan || 'Съёмка';
-
-const hourWord = n => {
-  const a = n % 10;
-  const b = n % 100;
-
-  if (a === 1 && b !== 11) {
-    return calcConfig.hour_one || 'час';
-  }
-
-  if (
-    [2, 3, 4].includes(a) &&
-    ![12, 13, 14].includes(b)
-  ) {
-    return calcConfig.hour_few || 'часа';
-  }
-
-  return calcConfig.hour_many || 'часов';
-};
-
-const updateCalc = () => {
-  const h = Number(hoursRange?.value || 1);
-
-  /*
-    Если съёмка длится больше 5 часов,
-    каждый час становится дешевле на 500 ₽
-  */
-  const hourlyRate =
-    h > 5
-      ? Math.max(0, currentRate - 500)
-      : currentRate;
-
-  const total = h * hourlyRate;
-
-  /*
-    Подсвечиваем калькулятор,
-    когда действует скидка
-  */
-  const calculator = $('.calculator');
-
-  if (calculator) {
-    calculator.classList.toggle(
-      'discount-active',
-      h > 5
-    );
-  }
-
-  if (hoursOutput) {
-    hoursOutput.textContent =
-      `${h} ${hourWord(h)} · ` +
-      `${formatNumber(hourlyRate)} ${currency}/ч`;
-  }
-
-  if (calcTotal) {
-    calcTotal.textContent =
-      `${formatNumber(total)} ${currency}`;
-  }
-
-  if (calcCta) {
-    calcCta.dataset.summary =
-      `${currentPlan}, ` +
-      `${h} ${hourWord(h)}, ` +
-      `${formatNumber(hourlyRate)} ${currency}/ч, ` +
-      `около ${formatNumber(total)} ${currency}`;
-  }
-};
-
-calcPlans.forEach(btn =>
-  btn.addEventListener('click', () => {
-
-    currentRate =
-      Number(btn.dataset.rate || 0);
-
-    currentPlan =
-      btn.dataset.plan || 'Съёмка';
-
-    calcPlans.forEach(other => {
-      const active = other === btn;
-
-      other.classList.toggle(
-        'active',
-        active
-      );
-
-      other.setAttribute(
-        'aria-pressed',
-        String(active)
-      );
-    });
-
-    updateCalc();
-  })
-);
-
-hoursRange?.addEventListener(
-  'input',
-  updateCalc
-);
-
-updateCalc();
+    const pricesSection = siteData?.prices_section || {};
+    const calcConfig = siteData?.calculator || {};
+    const currency = pricesSection.currency || '₽';
+    let currentRate = Number(calcPlans[0]?.dataset.rate || 0);
+    let currentPlan = calcPlans[0]?.dataset.plan || 'Съёмка';
+    const hourWord = n => { const a=n%10,b=n%100; if(a===1&&b!==11)return calcConfig.hour_one || 'час'; if([2,3,4].includes(a)&&![12,13,14].includes(b))return calcConfig.hour_few || 'часа'; return calcConfig.hour_many || 'часов'; };
+    const updateCalc = () => {
+      const h=Number(hoursRange?.value||1), total=h*currentRate;
+      if(hoursOutput)hoursOutput.textContent=`${h} ${hourWord(h)}`;
+      if(calcTotal)calcTotal.textContent=`${formatNumber(total)} ${currency}`;
+      if(calcCta)calcCta.dataset.summary=`${currentPlan}, ${h} ${hourWord(h)}, около ${formatNumber(total)} ${currency}`;
+    };
+    calcPlans.forEach(btn => btn.addEventListener('click', () => { currentRate=Number(btn.dataset.rate||0); currentPlan=btn.dataset.plan||'Съёмка'; calcPlans.forEach(o=>{const on=o===btn;o.classList.toggle('active',on);o.setAttribute('aria-pressed',String(on));}); updateCalc(); }));
+    hoursRange?.addEventListener('input', updateCalc); updateCalc();
 
     const copyButton = $('.copy-mail');
     copyButton?.addEventListener('click', async () => {
