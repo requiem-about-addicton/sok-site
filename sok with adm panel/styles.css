@@ -364,3 +364,112 @@ img{display:block;max-width:100%}
 .no-animations .ticker-track{animation:none!important}
 .no-cursor-glow .cursor-glow{display:none!important}
 @media(max-width:760px){.brand-logo{max-height:44px}.team-intro,.process-lead{font-size:13px}}
+/* =========================================
+   MOBILE FIXES
+========================================= */
+
+/* Стабильнее отображаем жирные шрифты */
+body,
+button,
+input,
+a {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+/* Не используем несуществующие веса 850 / 950 на мобильных */
+@media (max-width: 760px) {
+
+  .hero-copy h1,
+  .section-head h2,
+  .process-intro h2,
+  .contact-copy h2,
+  .team-card-copy h3,
+  .mobile-menu nav a {
+    font-weight: 900;
+  }
+
+  .btn,
+  .eyebrow,
+  .filter-btn,
+  .price-card,
+  .calc-plan {
+    font-weight: 700;
+  }
+
+  /* Первый экран — повышаем читаемость */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(6, 41, 31, .18) 0%,
+        rgba(6, 41, 31, .42) 42%,
+        rgba(6, 41, 31, .72) 100%
+      );
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-copy h1 {
+    text-shadow:
+      0 2px 16px rgba(0, 0, 0, .22);
+  }
+
+  .hero-lead {
+    color: rgba(255, 255, 255, .88);
+    text-shadow:
+      0 1px 12px rgba(0, 0, 0, .28);
+  }
+
+  /* Зелёный круг меньше мешает тексту */
+  .hero-blob-a {
+    opacity: .55;
+    right: -300px;
+    top: -260px;
+  }
+
+  /* Кнопки не ломаются на узких экранах */
+  .hero-actions .btn {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================
+   TEXT ARROWS — НЕ EMOJI
+========================================= */
+
+.project-arrow,
+.text-link span,
+.header-cta span,
+.contact-popover-item i,
+.contact-list i,
+.team-arrow,
+.lightbox-nav,
+.scroll-cue,
+.hero-actions span {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-variant-emoji: text;
+  font-style: normal;
+}
