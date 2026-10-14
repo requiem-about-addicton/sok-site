@@ -395,7 +395,7 @@
   "hero": {
     "enabled": true,
     "scroll_label": "SCROLL",
-    "small_image": "https://thb.tildacdn.pub/tild3038-3430-4539-b730-656233613133/-/empty/RlPFHQmmNe0VCW8LSXV3.jpg",
+    "small_image": "/assets/uploads/3pihf3qt3pajldqaswgaadaaevsnbgizladcutkt1fkz4tjaexg_5u4fbuumluv60qctvqby01mfjbbbc0rzasxhja_bea.jpg",
     "main_alt": "Пример событийной съёмки",
     "primary_href": "#portfolio",
     "secondary_label": "Посчитать стоимость",
@@ -416,7 +416,7 @@
       "REELS"
     ],
     "small_alt": "Пример портретной съёмки",
-    "main_image": "https://thb.tildacdn.pub/tild3663-3538-4334-a438-356663393230/-/empty/05062026-156.jpg",
+    "main_image": "/assets/uploads/gbqdgsijcpqqqx2nipgj2fehpby5cf2sfgszlqladicgszsrvkgiiast5fnfomjcut4qkzcflerwz6oapfbdrw30t88yyw.jpg",
     "secondary_href": "#prices",
     "primary_label": "Смотреть портфолио",
     "tags": [
