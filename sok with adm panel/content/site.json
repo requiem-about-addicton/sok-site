@@ -108,7 +108,7 @@
     {
       "title": "Юбилеи / Репортаж",
       "category": "event",
-      "image": "https://thb.tildacdn.pub/tild3663-3538-4334-a438-356663393230/-/empty/05062026-156.jpg",
+      "image": "/assets/uploads/ik4fdbrkj1xvw6lqxis2b2d0eiajrcevgjtizyafe4t9_-dbrca_osb67gw5t9fv0umry48wdbpg6adqbnvoux4k7jbova.jpg",
       "alt": "Событийная репортажная съёмка",
       "size": "wide",
       "enabled": true,
@@ -117,7 +117,7 @@
     {
       "title": "История двоих",
       "category": "wedding",
-      "image": "https://thb.tildacdn.pub/tild3465-3061-4566-a339-663062363765/-/empty/8FkZmIFanv853HRN__Sx.jpg",
+      "image": "/assets/uploads/8fkzmifanv853hrn__sx4zihzku_te3nuzcl21th1cve84glkyntnx1b-fngltplee1gnyx-ybtvzlco4rw5lbrk.jpg",
       "alt": "Свадебная история",
       "size": "tall",
       "enabled": true,
@@ -126,7 +126,7 @@
     {
       "title": "Команда в кадре",
       "category": "business",
-      "image": "https://thb.tildacdn.pub/tild6131-3435-4732-b963-623565646362/-/empty/05062026-173.jpg",
+      "image": "/assets/uploads/photo_2026-09-26_15-46-36-2-.jpg",
       "alt": "Бизнес-съёмка команды",
       "size": "normal",
       "enabled": true,
@@ -135,25 +135,25 @@
     {
       "title": "Портрет / Character",
       "category": "portrait",
-      "image": "https://thb.tildacdn.pub/tild3038-3430-4539-b730-656233613133/-/empty/RlPFHQmmNe0VCW8LSXV3.jpg",
+      "image": "/assets/uploads/kjdcavr5gaonak1yyxsvbsqitqdynqif5jwmtlpywnpl1d8o-9ad_47uzrrk5dlsnb_hgtnyewxj6jqjc9jvz8qdc0zm3q.jpg",
       "alt": "Портретная съёмка",
       "size": "normal",
       "enabled": true,
       "object_position": "center center"
     },
     {
-      "title": "Выпускной / Energy",
+      "title": "Крещение / Christening",
       "category": "event",
-      "image": "https://thb.tildacdn.pub/tild3664-3835-4136-a631-376330383562/-/empty/05062026-254.jpg",
-      "alt": "Съёмка выпускного",
+      "image": "/assets/uploads/ertqx3crnucradm8cjfyul2xti2hd0cnwrrlhazzmuv4n7irf50opm3ytkek_oxj6phjzubilbus3dvufil5ujbg.jpg",
+      "alt": "Крещение",
       "size": "wide",
       "enabled": true,
       "object_position": "center center"
     },
     {
-      "title": "Бренд / Продукт",
-      "category": "business",
-      "image": "https://thb.tildacdn.pub/tild6630-3532-4364-a630-616566643762/-/empty/05062026-269.jpg",
+      "title": "Концерты / Event",
+      "category": "event",
+      "image": "/assets/uploads/3uyam_d7uykjr3mt-jzlsha15box3plfhedeh_hhhzpze-zop0mb3ilqbhd15jqvdvfql4oe6i8ozlqkoizyztmi.jpg",
       "alt": "Контент для бизнеса",
       "size": "normal",
       "enabled": true,
@@ -162,7 +162,7 @@
     {
       "title": "Wedding story",
       "category": "wedding",
-      "image": "https://thb.tildacdn.pub/tild6362-6566-4732-a135-396266643039/-/empty/16ShKflx3mx-uxOaNarb.jpg",
+      "image": "/assets/uploads/o_etp_stbg7011qlknrtbtozovmntzcpye3xyg7nqghd1yfiglowiq45lumzfwry11e-wwxnygbqb6c-qvz6txop1pll3g.jpg",
       "alt": "Свадебная съёмка",
       "size": "tall",
       "enabled": true,
@@ -416,7 +416,7 @@
       "REELS"
     ],
     "small_alt": "Пример портретной съёмки",
-    "main_image": "/assets/uploads/gbqdgsijcpqqqx2nipgj2fehpby5cf2sfgszlqladicgszsrvkgiiast5fnfomjcut4qkzcflerwz6oapfbdrw30t88yyw.jpg",
+    "main_image": "/assets/uploads/mushtybh_xkx8ot8f-hm26bfuqyvswjcds8qmwmokyv6tm7cfrvqu-cl1zdl0ynh7sao5xo2rngsfwf3umcactn3q-2tbw.jpg",
     "secondary_href": "#prices",
     "primary_label": "Смотреть портфолио",
     "tags": [
